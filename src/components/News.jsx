@@ -20,8 +20,14 @@ const JLMCNews = () => {
   }, []);
 
   return (
-    <Container component="main" maxWidth="sm" style={{ marginTop: "10%" }}>
-      <Typography variant="h2">Noticias</Typography>
+    <Container
+      component="main"
+      maxWidth="sm"
+      style={{ marginTop: "10%", textAlign: "center" }}
+    >
+      <Typography color="white" variant="h2">
+        Noticias
+      </Typography>
 
       {isLoading ? (
         <CircularProgress />

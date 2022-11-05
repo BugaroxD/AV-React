@@ -1,112 +1,81 @@
 import {
-  AppBar,
-  Box,
-  Drawer,
-  Grid,
-  IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Toolbar,
-  Typography,
+  BottomNavigation,
+  BottomNavigationAction,
+  Paper,
   Avatar,
 } from "@mui/material";
-import { Outlet } from "react-router-dom";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Link, Outlet } from "react-router-dom";
+import { Box } from "@mui/system";
+import { useState } from "react";
 import * as React from "react";
 
 export const JLMCPageLayout = () => {
-  const drawerWidth = 240;
-
-  const DrawerApp = () => {
-    return (
-      <Box>
-        <Avatar
-          src="https://portalpopline.com.br/wp-content/uploads/2021/12/pacificador-dc-primeiras-impressoes.jpg"
-          sx={{ width: 100, height: 100 }}
-        />
-        <Typography variant="h5" sx={{ textAlign: "center", fontSize: "2rem" }}>
-          Peacemaker
-        </Typography>
-        <List>
-          <ListItem>
-            <ListItemButton component="a" href="/home">
-              <ListItemText primary={"Home"}></ListItemText>
-            </ListItemButton>
-          </ListItem>
-          <ListItem>
-            <ListItemButton component="a" href="/sobre">
-              <ListItemText primary={"Sobre"}></ListItemText>
-            </ListItemButton>
-          </ListItem>
-          <ListItem>
-            <ListItemButton component="a" href="/playlist">
-              <ListItemText primary={"Playlist"}></ListItemText>
-            </ListItemButton>
-          </ListItem>
-          <ListItem>
-            <ListItemButton component="a" href="/noticia">
-              <ListItemText primary={"Noticia"}></ListItemText>
-            </ListItemButton>
-          </ListItem>
-          <ListItem>
-            <ListItemButton component="a" href="/contato">
-              <ListItemText primary={"Contato"}></ListItemText>
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </Box>
-    );
-  };
-
-  const Container = () => {
-    const [abrirNav, setAbrirNav] = React.useState(false);
-
-    const abrirModal = () => {
-      setAbrirNav(!abrirNav);
-    };
-
-    return (
-      <Box>
-        <AppBar>
-          <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-              onClick={abrirModal}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-        <Box>
-          <Drawer
-            open={abrirNav}
-            variant="temporary"
-            sx={{
-              display: { xs: "block", sm: "block" },
-              "& .MuiDrawer-paper": {
-                boxSizing: "border-box",
-                width: drawerWidth,
-              },
-            }}
-          >
-            <DrawerApp />
-          </Drawer>
-        </Box>
-      </Box>
-    );
-  };
+  const [value, setValue] = useState(0);
 
   return (
-    <>
-      <Container />
+    <Paper style={{ backgroundColor: "black" }}>
+      <Box
+        flexDirection="column"
+        justifyContent="space-between"
+        height="100vh"
+        display="flex"
+        overflow-y={"hidden"}
+      >
+        <Avatar
+          src="https://portalpopline.com.br/wp-content/uploads/2021/12/pacificador-dc-primeiras-impressoes.jpg"
+          sx={{ width: 300, height: 300, margin: "0 auto" }}
+        />
 
-      <Outlet />
-    </>
+        <div style={{ maxHeight: "100vh", overflow: "auto" }}>
+          <Outlet />
+        </div>
+        <BottomNavigation
+          style={{
+            fontFamily: "Roboto",
+            fontWeight: "bold",
+            height: "auto",
+            padding: "1rem",
+          }}
+          showLabels
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+        >
+          <BottomNavigationAction
+            label="Home"
+            icon={""}
+            LinkComponent={Link}
+            to="/home"
+          />
+          <BottomNavigationAction
+            label="Sobre"
+            icon={""}
+            LinkComponent={Link}
+            to="/sobre"
+          />
+          <BottomNavigationAction
+            label="Notícias"
+            icon={""}
+            LinkComponent={Link}
+            to="/noticia"
+          />
+          <BottomNavigationAction
+            label="Playlist"
+            icon={""}
+            LinkComponent={Link}
+            to="/playlist"
+          />
+          <BottomNavigationAction
+            label="Contato"
+            icon={""}
+            LinkComponent={Link}
+            to="/contato"
+          />
+        </BottomNavigation>
+      </Box>
+    </Paper>
   );
 };
+
+export default JLMCPageLayout;
