@@ -55,16 +55,16 @@ export const JLMCPageLayout = () => {
             to="/sobre"
           />
           <BottomNavigationAction
-            label="Notícias"
-            icon={""}
-            LinkComponent={Link}
-            to="/noticia"
-          />
-          <BottomNavigationAction
             label="Playlist"
             icon={""}
             LinkComponent={Link}
             to="/playlist"
+          />
+          <BottomNavigationAction
+            label="Notícias"
+            icon={""}
+            LinkComponent={Link}
+            to="/noticia"
           />
           <BottomNavigationAction
             label="Contato"

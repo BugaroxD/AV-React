@@ -17,7 +17,7 @@ const JLMCPlaylist = () => {
           color: "blue",
         }}
       >
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -53,7 +53,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -89,7 +89,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -125,7 +125,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -161,7 +161,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -197,7 +197,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -233,7 +233,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -269,7 +269,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -305,7 +305,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -341,7 +341,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -377,7 +377,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -413,7 +413,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -449,7 +449,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{
@@ -485,7 +485,7 @@ const JLMCPlaylist = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Card
             xs={{ maxWidth: 345 }}
             style={{

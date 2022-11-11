@@ -1,74 +1,175 @@
-import { Box, Grid, Typography } from "@mui/material";
-import img from "../image/pacificadorjpeg.jpg";
+import { Avatar, Button, Card, CardContent, Typography } from "@mui/material";
+import Tooltip from "@mui/material/Tooltip";
+import { Box, Container } from "@mui/system";
+import React, { useEffect, useState } from "react";
 
 const JLMCAbout = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
   return (
-    <Box
-      style={{
-        minHeight: "calc(100vh - 60px)",
-        backgroundPosition: "9% 20%",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <Grid container style={{ backgroundColor: "black" }}>
-        <Grid item sm={12} md={6}>
-          <img src={img} alt="Pacificador" className="img-fluid" />
-        </Grid>
-        <Grid item sm={12} md={6}>
-          <Box
-            align="right"
+    <Container component="main" maxWidth="xs" style={{ marginTop: "10%" }}>
+      {isLoading ? (
+        <div>Carregando</div>
+      ) : (
+        <Box component="form" noValidate sx={{ mt: 1 }}>
+          <Card
             style={{
-              color: "#FFF",
-              padding: "2rem",
-              lineHeight: "1.8rem",
-              fontFamily: "Roboto",
+              marginTop: "8%",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "119%",
+              backgroundImage: `url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/580px-Flag_of_the_United_States.svg.png)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
             }}
           >
-            <Typography variant="h1">Origem do Pacificador</Typography>
-            <Typography variant="p">
-              Nascido Christopher Schmidt, o Pacificador é filho único. Seu pai,
-              um ex-comandante de um campo de concentração nazista, valorizava a
-              força e o poder acima de tudo. Ele cometeu suicídio quando Smith
-              tinha apenas cinco anos de idade, e Smith viu isso acontecer.
+            <Avatar
+              src="https://c.tenor.com/R7Aasqd5aFQAAAAC/peacemaker-john-cena.gif"
+              sx={{ width: 250, height: 250 }}
+            />
+            <Typography style={{ textAlign: "center" }} variant="h2">
+              <h5>Pacificador</h5>
             </Typography>
-            <Typography variant="p">
-              O menino problemático iria para o exército depois de concluir o
-              ensino médio, onde ficou cara a cara com as terríveis realidades
-              da guerra.
+            <Typography style={{ textAlign: "center" }} variant="h5">
+              Anti-Herói
             </Typography>
-            <Typography variant="p">
-              Acusado de massacrar pessoas inocentes, Smith foi preso e julgado
-              pelos crimes de guerra.
+
+            <CardContent>
+              <Tooltip title="Ouvir">
+                <Button
+                  type="submit"
+                  variant="outlined"
+                  href="https://br.ign.com/pacificador/95828/feature/pacificador-origem-habilidades-serie-john-cena-dc-comics#:~:text=Origem%20do%20Pacificador,e%20Smith%20viu%20isso%20acontecer."
+                  sx={{ mt: 3, mb: 2 }}
+                >
+                  Acessar história do personagem
+                </Button>
+              </Tooltip>
+            </CardContent>
+          </Card>
+
+          <Card
+            style={{
+              marginTop: "10%",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "119%",
+              backgroundImage: `url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/580px-Flag_of_the_United_States.svg.png)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          >
+            <Avatar
+              src="https://c.tenor.com/eNrJcMwpoU4AAAAC/vigilante-vigilante-dc.gif"
+              sx={{ width: 250, height: 250 }}
+            />
+            <Typography style={{ textAlign: "center" }} variant="h2">
+              <h5>Vigilante</h5>
             </Typography>
-            <Typography variant="p">
-              Enquanto cumpria sua sentença, ele concordou em participar de um
-              programa secreto antiterrorismo do Pentágono chamado Projeto:
-              Pacificador.
+            <Typography style={{ textAlign: "center" }} variant="h5">
+              Anti-Herói
             </Typography>
-            <Typography variant="p">
-              Os agentes do programa treinaram em uma base militar de alta
-              tecnologia, mas nunca foram mobilizados, e Smith acabou sendo
-              libertado em sua prometida liberdade condicional.
+
+            <CardContent>
+              <Tooltip title="Ouvir">
+                <Button
+                  type="submit"
+                  variant="outlined"
+                  href="https://www.adorocinema.com/noticias/series/noticia-161612/"
+                  sx={{ mt: 3, mb: 2 }}
+                >
+                  Acessar história do personagem
+                </Button>
+              </Tooltip>
+            </CardContent>
+          </Card>
+
+          <Card
+            style={{
+              marginTop: "10%",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "119%",
+              backgroundImage: `url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/580px-Flag_of_the_United_States.svg.png)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          >
+            <Avatar
+              src="https://ovicio.com.br/wp-content/uploads/2022/02/20220213-ovicio-pacificador-dragao-branco-hbo-max-555x555.jpg"
+              sx={{ width: 250, height: 250 }}
+            />
+            <Typography style={{ textAlign: "center" }} variant="h2">
+              <h5>Dragão Branco</h5>
             </Typography>
-            <Typography variant="p">
-              A ideia mais tarde inspirou Smith a se tornar um combatente do
-              crime fantasiado como uma forma de penitência pelos crimes
-              terríveis que ele e seu pai cometeram.
+            <Typography style={{ textAlign: "center" }} variant="h5">
+              Vilão
             </Typography>
-            <Typography variant="p">
-              Enquanto ele desencadeava sua forma de justiça, Smith
-              frequentemente ouvia a voz de seu pai em sua cabeça. Isso
-              continuou a atormentá-lo em sua furiosa cruzada pela paz.
+
+            <CardContent>
+              <Tooltip title="Ouvir">
+                <Button
+                  type="submit"
+                  variant="outlined"
+                  href="https://www.legiaodosherois.com.br/2022/pacificador-dragao-branco-tudo-sobre.html"
+                  sx={{ mt: 3, mb: 2 }}
+                >
+                  Acessar história do personagem
+                </Button>
+              </Tooltip>
+            </CardContent>
+          </Card>
+
+          <Card
+            style={{
+              marginTop: "10%",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "119%",
+              backgroundImage: `url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/580px-Flag_of_the_United_States.svg.png)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          >
+            <Avatar
+              src="https://c.tenor.com/zRS2ht2dTegAAAAC/judomaster-thumbs-up.gif"
+              sx={{ width: 250, height: 250 }}
+            />
+            <Typography style={{ textAlign: "center" }} variant="h2">
+              <h5>Mestre Judoca</h5>
             </Typography>
-            <Typography variant="p">
-              O vigilante sofria de delírios de que não apenas o espírito de seu
-              pai o assombrava, mas também que as vozes daqueles que ele havia
-              matado estavam presas dentro de seu capacete excêntrico.
+            <Typography style={{ textAlign: "center" }} variant="h5">
+              Anti-Herói
             </Typography>
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
+
+            <CardContent>
+              <Tooltip title="Ouvir">
+                <Button
+                  type="submit"
+                  variant="outlined"
+                  href="https://feededigno.com.br/quadrinhos/mestre-judoca-conheca-o-novo-personagem-de-pacificador/"
+                  sx={{ mt: 3, mb: 2 }}
+                >
+                  Acessar história do personagem
+                </Button>
+              </Tooltip>
+            </CardContent>
+          </Card>
+        </Box>
+      )}
+    </Container>
   );
 };
 export default JLMCAbout;
